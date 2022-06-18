@@ -47,7 +47,7 @@ void takeUserInput() {
     int sensorValue = analogRead(potentiometerPin); // read potentiometer value
     desiredTime = map(sensorValue, 0, 1023, 0, 255); //calculate value
     lcd.setCursor(0, 1);
-    lcd.print(String(desiredTime));
+    lcd.print(String(desiredTime));  //display user choice of time
     if (digitalRead(timeButtonPin)) {
       timeButtonPressed = true;
       break;
